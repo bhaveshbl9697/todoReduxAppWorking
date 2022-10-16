@@ -1,0 +1,80 @@
+.App {
+  text-align: center;
+}
+
+.container {
+  background-image: url("../src/Images/background.jpg");
+  height: auto;
+  background-position: center;
+  background-repeat: unset;
+  background-size: cover;
+
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  justify-content: auto;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  overflow: auto;
+}
+
+.main-div {
+  text-align: center;
+  height: 590px;
+  width: auto;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 0px;
+
+  align-self: center;
+  overflow: auto;
+}
+
+
+.todo-form {
+  background-color: rgb(25, 161, 229);
+  padding: 10px;
+}
+
+
+.todo-input-add {
+  border: 3px solid rgb(120, 118, 121);
+  width: 430px;
+  height: 50px;
+  border-radius: 50px;
+  margin-bottom: 0px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  font-size: medium;
+  pointer-events: visibleFill;
+}
+
+::placeholder {
+  color: rgb(11, 2, 2);
+  opacity: 1;
+}
+
+.embed-btn {
+  display: inline;
+  flex-direction: row;
+  justify-self: center;
+  justify-content: center;
+  width: 140px;
+  gap: 5px;
+  margin: 10px;
+  align-items: center;
+  padding: 0px 10px;
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 16px;
+  color: #764ABC;
+  height: 48px;
+  background: #FFFFFF;
+  mix-blend-mode: normal;
+  box-shadow: 0px 24px 30px rgb(0 0 0 / 11%);
+  border-radius: 60px;
+  border: none;
+}
