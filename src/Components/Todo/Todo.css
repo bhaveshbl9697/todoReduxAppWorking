@@ -1,0 +1,45 @@
+.todo-container {
+          display: flex;
+          flex-direction: row;
+          position: relative;
+}
+
+
+.todo-row {
+          display: inline-table;
+          margin: 5px;
+          color: #fff;
+          border: #fff;
+          background-color: #6842a4c6;
+          padding: 5px;
+          border-radius: 3px;
+          width: 60%;
+          text-align: center;
+          padding-inline-start: 20px;
+}
+
+.icons {
+          cursor: pointer;
+          size: 20px;
+          padding: 20px;
+}
+
+.delete-icon {
+          margin-right: 5px;
+          size: 20px;
+          color: #fff;
+
+}
+
+.edit-icon {
+          color: #fff;
+          size: 20px;
+}
+
+.complete {
+          background-color: dimgrey;
+          text-decoration-color: darkgreen;
+          border: 5px dotted rgba(11, 195, 26, 0.863);
+          color: rgb(187, 234, 139);
+
+}

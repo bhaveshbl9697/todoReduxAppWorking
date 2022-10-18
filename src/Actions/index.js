@@ -3,7 +3,9 @@ export const addTodo = ( data ) => {
                     type: "ADD_TODO",
                     payload: {
                               id: new Date().getTime().toString(),
-                              data: data
+                              data: data,
+                              isComplete: false,
+                              dateAndTime: 'Date :- ' + new Date().getFullYear() + '-' + ( new Date().getMonth() + 1 ) + '-' + new Date().getDate() + '  Time :-' + new Date().getHours() + ':' + ( new Date().getMinutes() + 1 ) + ':' + new Date().getSeconds()
                     }
           }
 }
@@ -13,8 +15,21 @@ export const deleteTodo = ( id ) => {
                     id
           }
 }
-export const updateTodo = () => {
+export const completeTodo = ( id, isComplete ) => {
           return {
-                    type: "UPDATE_TODO"
+                    type: "COMPLETE_TODO",
+                    id,
+                    isComplete
+          }
+}
+export const updateTodo = ( id, newValue, complete ) => {
+          return {
+                    type: "UPDATE_TODO",
+                    payload: {
+                              id: id,
+                              data: newValue,
+                              isComplete: complete
+                    }
+
           }
 }

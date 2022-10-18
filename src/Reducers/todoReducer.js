@@ -11,10 +11,12 @@ const todoReducers = ( state = initialData, action ) => {
                                                   ...state.list,
                                                   {
                                                             id: id,
-                                                            data: data
+                                                            data: data,
+                                                            isComplete: false
                                                   }
                                         ]
                               }
+
                     default: return state;
 
                     case "DELETE_TODO":
@@ -24,9 +26,31 @@ const todoReducers = ( state = initialData, action ) => {
                                         list: newList
                               }
 
-                    //case "UPDATE_TODO": {
-
-                    // }
+                    case "COMPLETE_TODO":
+                              const completeTodos = state.list.map( ( todo ) => {
+                                        if ( todo.id === action.id ) {
+                                                  todo.isComplete = !todo.isComplete;
+                                        }
+                                        return todo;
+                              } );
+                              return {
+                                        ...state,
+                                        list: completeTodos
+                              }
+                    case "UPDATE_TODO": {
+                              const { id, data, complete } = action.payload;
+                              const newUpdatedValues = state.list.map( ( todo ) => {
+                                        if ( todo.id === id ) {
+                                                  todo.data = data;
+                                                  todo.isComplete = complete;
+                                        }
+                                        return todo;
+                              } );
+                              return {
+                                        ...state,
+                                        list: newUpdatedValues
+                              }
+                    }
           }
 }
 
